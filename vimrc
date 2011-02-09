@@ -236,7 +236,7 @@ nnoremap Y y$
 let g:syntastic_enable_signs=1
 
 "snipmate setup
-source ~/.vim/snippets/support_functions.vim
+source C:/Program Files/vim/vimfiles/snippets/support_functions.vim
 autocmd vimenter * call s:SetupSnippets()
 function! s:SetupSnippets()
 
@@ -285,3 +285,9 @@ function! s:HighlightLongLines(width)
         echomsg "Usage: HighlightLongLines [natural number]"
     endif
 endfunction
+
+if has('gui running')
+  set guifont=Consolas:h9
+endif
+
+map <F2> :NERDTreeToggle<CR>
