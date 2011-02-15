@@ -291,3 +291,8 @@ if has('gui running')
 endif
 
 map <F2> :NERDTreeToggle<CR>
+
+set nobackup
+set nowritebackup
+set noswapfile
+
