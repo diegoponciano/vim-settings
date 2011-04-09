@@ -14,4 +14,3 @@ autocmd VimEnter * wincmd p
 set lines=40 columns=140
 :nnoremap <Tab> :bnext<CR>
 :nnoremap <S-Tab> :bprevious<CR>
-
