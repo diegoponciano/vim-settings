@@ -5,10 +5,11 @@ set guifont=Inconsolata\ 12
 set vb
 
 " No toolbar
-" set guioptions-=T
-set guioptions=egmrt
+set guioptions-=T
+" set guioptions=egmrt
 
-autocmd VimEnter * NERDTree
+" autocmd VimEnter * NERDTree
+autocmd VimEnter * NERDTreeFind
 autocmd VimEnter * wincmd p
 
 set lines=40 columns=140
