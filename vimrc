@@ -7,7 +7,7 @@ set backspace=indent,eol,start
 
 "store lots of :cmdline history
 set history=1000
-colorscheme grb3
+colorscheme peaksea
 set showcmd     "show incomplete cmds down the bottom
 set showmode    "show current mode down the bottom
 
@@ -236,7 +236,7 @@ nnoremap Y y$
 let g:syntastic_enable_signs=1
 
 "snipmate setup
-source C:/Program Files/vim/vimfiles/snippets/support_functions.vim
+source ~/.vim/snippets/support_functions.vim
 autocmd vimenter * call s:SetupSnippets()
 function! s:SetupSnippets()
 

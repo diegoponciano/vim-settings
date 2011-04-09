@@ -1,11 +1,12 @@
 " Font
-set guifont=Consolas:h10.00
+set guifont=Inconsolata\ 12
 
 " No audible bell
 set vb
 
 " No toolbar
-set guioptions-=T
+" set guioptions-=T
+set guioptions=egmrt
 
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
