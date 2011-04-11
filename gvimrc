@@ -11,6 +11,8 @@ set guioptions-=T
 " autocmd VimEnter * NERDTree
 autocmd VimEnter * NERDTreeFind
 autocmd VimEnter * wincmd p
+autocmd BufEnter * lcd %:p:h
+" map <leader>r :NERDTreeFind<cr>
 
 set lines=40 columns=140
 :nnoremap <Tab> :bnext<CR>
