@@ -17,6 +17,9 @@ set hlsearch    "hilight searches by default
 set nowrap      "dont wrap lines
 set linebreak   "wrap lines at convenient points
 
+"makes vim works with RVM
+set shellcmdflag=-ic
+
 "statusline setup
 set statusline=%f       "tail of the filename
 
@@ -216,6 +219,23 @@ if !has("gui")
     let g:CSApprox_loaded = 1
 endif
 
+" Map <Ctrl-C> and <Ctrl-V> to the OSX clipboard (using fakeclip plugin)
+"map <C-A-c> <Plug>(fakeclip-y)
+"map <C-A-v> <Plug>(fakeclip-p)
+" Copy paste using system clipboard
+vmap <C-y> "+y
+vmap <C-u> "+p
+nmap <C-u> "+p
+imap <C-u> <esc>"+p
+imap <C-v> <esc>pa
+
+" CTRL-S is Save
+noremap <C-s> :w<CR>
+inoremap <C-s> <esc>:w<CR>
+
+" Ctrl-A == Select All
+nmap <silent> <C-A> ggVG<CR>
+    
 "make <c-l> clear the highlight as well as redraw
 nnoremap <C-L> :nohls<CR><C-L>
 inoremap <C-L> <C-O>:nohls<CR>
