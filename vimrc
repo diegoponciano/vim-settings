@@ -219,9 +219,6 @@ if !has("gui")
     let g:CSApprox_loaded = 1
 endif
 
-" Map <Ctrl-C> and <Ctrl-V> to the OSX clipboard (using fakeclip plugin)
-"map <C-A-c> <Plug>(fakeclip-y)
-"map <C-A-v> <Plug>(fakeclip-p)
 " Copy paste using system clipboard
 vmap <C-y> "+y
 vmap <C-u> "+p
@@ -239,6 +236,21 @@ nmap <silent> <C-A> ggVG<CR>
 "make <c-l> clear the highlight as well as redraw
 nnoremap <C-L> :nohls<CR><C-L>
 inoremap <C-L> <C-O>:nohls<CR>
+
+" ,bd to close buffer without changing window layout.
+nmap <leader>bd :Bclose<CR>
+imap <C-b>d <esc>:Bclose<CR>
+
+" new line after the cursor (move content to the new line)
+nnoremap <C-J> a<CR><Esc>k$
+
+" Enter to new line after, Shift-Enter to new line before
+map <S-Enter> O<Esc>
+" map <CR> o<Esc>
+nmap <CR> o<Esc>
+
+"map O O<Esc>j
+"map o o<Esc>k
 
 "map to bufexplorer
 nnoremap <C-B> :BufExplorer<cr>
