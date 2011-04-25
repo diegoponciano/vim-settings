@@ -14,8 +14,8 @@ set showmode    "show current mode down the bottom
 set incsearch   "find the next match as we type the search
 set hlsearch    "hilight searches by default
 
-set nowrap      "dont wrap lines
-set linebreak   "wrap lines at convenient points
+" set nowrap      "dont wrap lines
+" set linebreak   "wrap lines at convenient points
 
 "makes vim works with RVM
 set shellcmdflag=-ic
@@ -219,6 +219,9 @@ if !has("gui")
     let g:CSApprox_loaded = 1
 endif
 
+" Ctrl+H replaces the selected text with something else
+vnoremap <C-h> "hy:%s/<C-r>h//gc<left><left><left>
+
 " Copy paste using system clipboard
 vmap <C-y> "+y
 vmap <C-u> "+p
@@ -266,6 +269,9 @@ nnoremap Y y$
 
 "mark syntax errors with :signs
 let g:syntastic_enable_signs=1
+
+" enables tree style on netrw
+let g:netrw_liststyle=3
 
 "snipmate setup
 source ~/.vim/snippets/support_functions.vim
