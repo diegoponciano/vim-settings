@@ -219,8 +219,16 @@ if !has("gui")
     let g:CSApprox_loaded = 1
 endif
 
-" Ctrl+H replaces the selected text with something else
-vnoremap <C-h> "hy:%s/<C-r>h//gc<left><left><left>
+command Txml set ft=xml | execute "%!tidy -q -i -xml"
+command Thtml set ft=html | execute "%!tidy -q -i -html"
+
+" tidy html
+map <F12> :%!tidy -i -q --tidy-mark 0 2>/dev/null<CR>
+
+" Shift+Alt+r replaces current word
+nnoremap <s-m-r> :%s/<C-r><C-w>//gc<Left><Left><Left>
+inoremap <s-m-r> <C-O>:%s/<C-r><C-w>//g<Left><Left>
+vnoremap <s-m-r> "hy:%s/<C-r>h//gc<Left><Left><Left>
 
 " Copy paste using system clipboard
 vmap <C-y> "+y
@@ -333,4 +341,48 @@ map <F2> :NERDTreeToggle<CR>
 set nobackup
 set nowritebackup
 set noswapfile
+
+" Setup Vundle Support {
+" The next two lines ensure that the ~/.vim/vundle.git system works
+    set rtp+=~/.vim/vundle.git/
+    silent! call vundle#rc()
+    
+    " original repos on github
+    Bundle 'greyblake/vim-preview'
+
+    " snippets
+    " Bundle "snipMate"
+    " better comments
+    " Bundle "The-NERD-Commenter"
+    " git goodness
+    Bundle "fugitive.vim"
+    " tab autocomplete
+    Bundle "SuperTab"
+    " delimiters
+    " Bundle "delimitMate.vim"
+    " surround with parentheses, brackets, quotes
+    " Bundle "surround.vim"
+    " file explorer
+    " Bundle "The-NERD-tree"
+    " better grep
+    " Bundle "ack.vim"
+    " json support
+    Bundle "JSON.vim"
+    " better jquery syntax
+    Bundle "jQuery"
+    if has('gui')
+      " use themes in console
+      Bundle "CSApprox"
+    endif
+    " bunch of themes"
+    Bundle "Color-Sampler-Pack"
+    " changes colors easily
+    Bundle "ScrollColors"
+    " save sessions
+    Bundle "session.vim--Odding"
+    " L9
+    Bundle "L9"
+    " finding files
+    Bundle "FuzzyFinder"
+    " }
 
