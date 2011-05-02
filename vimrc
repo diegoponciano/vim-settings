@@ -230,6 +230,16 @@ nnoremap <s-m-r> :%s/<C-r><C-w>//gc<Left><Left><Left>
 inoremap <s-m-r> <C-O>:%s/<C-r><C-w>//g<Left><Left>
 vnoremap <s-m-r> "hy:%s/<C-r>h//gc<Left><Left><Left>
 
+"Basically you press <m-s> to search for the current selection !! Really useful
+vnoremap <silent> <s-s> :call VisualSearch('f')<CR>
+inoremap <silent> <s-s> <c-o>/<C-r><c-w>/e<CR>
+noremap <silent> <s-s> /<c-r><c-w>/e<CR>
+
+"Basically you press <m-r> to search for the current selection !! Really useful
+vnoremap <silent> <m-r> :call VisualSearch('b')<CR>
+inoremap <silent> <m-r> <c-o>?<C-r><c-w><CR>
+nnoremap <silent> <m-r> ?<C-r><c-w><CR>
+
 " Copy paste using system clipboard
 vmap <C-y> "+y
 vmap <C-u> "+p
@@ -350,10 +360,12 @@ set noswapfile
     " original repos on github
     Bundle 'greyblake/vim-preview'
 
+
+    " default repository
     " snippets
-    " Bundle "snipMate"
+    Bundle "snipMate"
     " better comments
-    " Bundle "The-NERD-Commenter"
+    Bundle "The-NERD-Commenter"
     " git goodness
     Bundle "fugitive.vim"
     " tab autocomplete
@@ -361,9 +373,9 @@ set noswapfile
     " delimiters
     " Bundle "delimitMate.vim"
     " surround with parentheses, brackets, quotes
-    " Bundle "surround.vim"
+    Bundle "surround.vim"
     " file explorer
-    " Bundle "The-NERD-tree"
+    Bundle "The-NERD-tree"
     " better grep
     " Bundle "ack.vim"
     " json support
