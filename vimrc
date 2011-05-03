@@ -362,6 +362,8 @@ set noswapfile
 
 
     " default repository
+    " Commant-T
+    Bundle "command-T"
     " snippets
     Bundle "snipMate"
     " better comments
@@ -371,7 +373,7 @@ set noswapfile
     " tab autocomplete
     Bundle "SuperTab"
     " delimiters
-    " Bundle "delimitMate.vim"
+    Bundle "delimitMate.vim"
     " surround with parentheses, brackets, quotes
     Bundle "surround.vim"
     " file explorer
