@@ -357,7 +357,9 @@ set noswapfile
 
     " default repository
     " MatchIt
-    Bundle "matchit" 
+    Bundle "matchit.zip" 
+    " Ruby MatchIt
+    Bundle "ruby-matchit" 
     " BufExplorer
     Bundle "bufexplorer"  
     " Commant-T
