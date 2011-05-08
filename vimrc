@@ -291,22 +291,6 @@ let g:syntastic_enable_signs=1
 " enables tree style on netrw
 let g:netrw_liststyle=3
 
-""snipmate setup
-"source ~/.vim/snippets/support_functions.vim
-"autocmd vimenter * call s:SetupSnippets()
-"function! s:SetupSnippets()
-
-    ""if we're in a rails env then read in the rails snippets
-    "if filereadable("./config/environment.rb")
-        "call ExtractSnips("~/.vim/snippets/ruby-rails", "ruby")
-        "call ExtractSnips("~/.vim/snippets/eruby-rails", "eruby")
-    "endif
-
-    "call ExtractSnips("~/.vim/snippets/html", "eruby")
-    "call ExtractSnips("~/.vim/snippets/html", "xhtml")
-    "call ExtractSnips("~/.vim/snippets/html", "php")
-"endfunction
-
 "visual search mappings
 function! s:VSetSearch()
     let temp = @@
@@ -364,8 +348,18 @@ set noswapfile
     Bundle "ervandew/supertab"
     " snippets for snipMate
     Bundle "scrooloose/snipmate-snippets"
+    " The-NERD-tree
+    Bundle "scrooloose/nerdtree"
+    " Mini-BufExplorer
+    Bundle "fholgado/minibufexpl.vim"
+    " Rails
+    Bundle "tpope/vim-rails"
 
     " default repository
+    " MatchIt
+    Bundle "matchit" 
+    " BufExplorer
+    Bundle "bufexplorer"  
     " Commant-T
     Bundle "command-T"
     " snippets
@@ -379,9 +373,9 @@ set noswapfile
     " surround with parentheses, brackets, quotes
     Bundle "surround.vim"
     " file explorer
-    Bundle "The-NERD-tree"
+    "Bundle The-NERD-tree"
     " better grep
-    " Bundle "ack.vim"
+    Bundle "ack.vim"
     " json support
     Bundle "JSON.vim"
     " better jquery syntax
