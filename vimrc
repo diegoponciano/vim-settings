@@ -291,21 +291,21 @@ let g:syntastic_enable_signs=1
 " enables tree style on netrw
 let g:netrw_liststyle=3
 
-"snipmate setup
-source ~/.vim/snippets/support_functions.vim
-autocmd vimenter * call s:SetupSnippets()
-function! s:SetupSnippets()
+""snipmate setup
+"source ~/.vim/snippets/support_functions.vim
+"autocmd vimenter * call s:SetupSnippets()
+"function! s:SetupSnippets()
 
-    "if we're in a rails env then read in the rails snippets
-    if filereadable("./config/environment.rb")
-        call ExtractSnips("~/.vim/snippets/ruby-rails", "ruby")
-        call ExtractSnips("~/.vim/snippets/eruby-rails", "eruby")
-    endif
+    ""if we're in a rails env then read in the rails snippets
+    "if filereadable("./config/environment.rb")
+        "call ExtractSnips("~/.vim/snippets/ruby-rails", "ruby")
+        "call ExtractSnips("~/.vim/snippets/eruby-rails", "eruby")
+    "endif
 
-    call ExtractSnips("~/.vim/snippets/html", "eruby")
-    call ExtractSnips("~/.vim/snippets/html", "xhtml")
-    call ExtractSnips("~/.vim/snippets/html", "php")
-endfunction
+    "call ExtractSnips("~/.vim/snippets/html", "eruby")
+    "call ExtractSnips("~/.vim/snippets/html", "xhtml")
+    "call ExtractSnips("~/.vim/snippets/html", "php")
+"endfunction
 
 "visual search mappings
 function! s:VSetSearch()
@@ -356,10 +356,14 @@ set noswapfile
 " The next two lines ensure that the ~/.vim/vundle.git system works
     set rtp+=~/.vim/vundle.git/
     silent! call vundle#rc()
-    
-    " original repos on github
-    Bundle 'greyblake/vim-preview'
 
+    " original repos on github
+    " preview markup files (markdown,rdoc,textile,html)
+    Bundle 'greyblake/vim-preview'
+    " tab autocomplete
+    Bundle "ervandew/supertab"
+    " snippets for snipMate
+    Bundle "scrooloose/snipmate-snippets"
 
     " default repository
     " Commant-T
@@ -370,8 +374,6 @@ set noswapfile
     Bundle "The-NERD-Commenter"
     " git goodness
     Bundle "fugitive.vim"
-    " tab autocomplete
-    Bundle "SuperTab"
     " delimiters
     Bundle "delimitMate.vim"
     " surround with parentheses, brackets, quotes
