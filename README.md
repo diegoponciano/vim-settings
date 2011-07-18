@@ -10,16 +10,13 @@ The simplest thing you can do is to clone this repo and put it to your drive som
 By default, Vim will look for these files in your root, so you'll need to alias them like this:
 
      ```
-     $ git clone http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-     ```
-
-     ```
      $ ln -s ~/VimSettings/vimrc .vimrc 
      $ ln -s ~/VimSettings/gvimrc .gvimrc 
      $ ln -s ~/VimSettings/vimfiles .vim 
      ```
 
 Once that's done, run this command inside it to download the plugins using Vundle (plugin manager):
+
      ```
      :BundleInstall
      ```
