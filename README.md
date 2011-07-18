@@ -8,13 +8,15 @@ This is based of the scrooloose repo, minus some menu settings and so on.
 The simplest thing you can do is to clone this repo and put it to your drive somewhere ('~/VimSettings/' for instance), then you need to setup some aliases to point to the vimrc and gvimrc files and to the .vim folder.
 
 By default, Vim will look for these files in your root, so you'll need to alias them like this:
-```$ ln -s ~/VimSettings/vimrc .vimrc 
+```
+$ ln -s ~/VimSettings/vimrc .vimrc 
 ln -s ~/VimSettings/gvimrc .gvimrc 
 ln -s ~/VimSettings/vimfiles .vim 
 ```
 
 Once that's done, run this command inside it to download the plugins using Vundle (plugin manager):
-```:BundleInstall
+```
+:BundleInstall
 ```
 
 ## Installation: Windows
