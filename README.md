@@ -9,17 +9,13 @@ The simplest thing you can do is to clone this repo and put it to your drive som
 
 By default, Vim will look for these files in your root, so you'll need to alias them like this:
 
-     ```
      $ ln -s ~/VimSettings/vimrc .vimrc 
      $ ln -s ~/VimSettings/gvimrc .gvimrc 
      $ ln -s ~/VimSettings/vimfiles .vim 
-     ```
 
 Once that's done, run this command inside it to download the plugins using Vundle (plugin manager):
 
-     ```
      :BundleInstall
-     ```
 
 ## Installation: Windows
 If you've installed GVim you have a directory in Program Files (if you're on 64 bit, this is Program Files (x86)) called "Vim". Inside there is where you'll want to put all these files.
